@@ -1,6 +1,9 @@
-import React from "react";
+import { useEffect} from 'react'
 
 const Login = () => {
+  useEffect(()=>{
+  alert("welcome to my page")
+},[])
   return (
     <div
       style={{

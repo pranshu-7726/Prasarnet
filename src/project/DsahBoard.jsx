@@ -77,7 +77,7 @@ const DsahBoard = () => {
                 background: "#fff",
                 padding: "20px",
                 borderRadius: "12px",
-                boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
+                boxShadow: "0 4px 10px rgba(15, 14, 14, 0.1)",
                 textAlign: "center",
               }}
             >
