@@ -85,7 +85,7 @@ const TodoForm = () => {
        
        <div style={{boxShadow:"0 4px 10px rgba(0,0,0,0.1)",
        height:"50vh",
-        borderRadius:"52vh",
+        borderRadius:"2vh",
        }}>
          <h1 style={{ textAlign: "center",paddingTop:"3vh"}}>Todo Form Office</h1>
 
