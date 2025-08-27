@@ -1,54 +1,65 @@
-import React,{useEffect} from 'react'
-import { useLocation} from 'react-router-dom'
+import React, { useEffect } from "react";
+import { useLocation, Link, useNavigate } from "react-router-dom";
+import "./SideBar.css";
 
-const Sidebar = ({setHeaderName}) => {
-    const location =useLocation();
-    const isActiveRoute=(path) =>{
-        const returnValue=location.pathname.startsWith(path)?true : false;
-        return returnValue;
-    }
+const Sidebar = ({ setHeaderName }) => {
+  const location = useLocation();
+  const isActiveRoute = (path) => {
+    const returnValue = location.pathname.startsWith(path) ? true : false;
+    return returnValue;
+  };
+  const Navigate =useNavigate();
+  const handelLogout = () => {
+    Navigate("/login");
+  };
   return (
-    <div>
-    <div style={{ display: "flex",width:"14vw", height: "100vh", fontFamily: "Arial, sans-serif" }}>
-          <div
-        style={{
-          width: "14vw",
-          background: "#333",
-          color: "#fff",
-          padding: "20px",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-        }}
-      >
+    <div className="sidebar-container">
+      <div className="sidebar">
         <div>
-          <h2 style={{ marginBottom: "30px", textAlign: "left" }}>Menu</h2>
-          <ul style={{ listStyle: "none", padding: "0" }}>
-           <li style={{ margin: "15px 0", }} onClick={()=>setHeaderName("Dashboard")}> <a href="/dashBoard" style={{color:"#fff",textDecoration:"none"}}>DashBoard</a></li>
-            <li style={{ margin: "15px 0",  }} onClick={()=>setHeaderName("Profile")}> <a href="/profile" style={{color:"#fff",textDecoration:"none"}}>Profile</a></li>
-            <li style={{ margin: "15px 0",}} onClick={()=>setHeaderName("Todo List")}> <a href="/todoList" style={{color:"#fff",textDecoration:"none"}}>Todo List</a></li>
-            <li style={{ margin: "15px 0",}} onClick={()=>setHeaderName("Todo From")}> <a href="/todoFrom" style={{color:"#fff",textDecoration:"none"}}>Todo From</a></li>
+          <h2 className="sidebar-title">Menu</h2>
+          <ul className="sidebar-list">
+            <li onClick={() => setHeaderName("Dashboard")}>
+              <Link
+                to="/DashBoard"
+                className={isActiveRoute("/DashBoard") ? "active-link" : ""}
+              >
+                Dashboard
+              </Link>
+            </li>
+            <li onClick={() => setHeaderName("Profile")}>
+              <Link
+                to="/Profile"
+                className={isActiveRoute("/Profile") ? "active-link" : ""}
+              >
+                Profile
+              </Link>
+            </li>
+            <li onClick={() => setHeaderName("Todo List")}>
+              <Link
+                to="/TodoList"
+                className={isActiveRoute("/TodoList") ? "active-link" : ""}
+              >
+                Todo List
+              </Link>
+            </li>
+            <li onClick={() => setHeaderName("Todo Form")}>
+              <Link
+                to="/TodoFrom"
+                className={isActiveRoute("/TodoFrom") ? "active-link" : ""}
+              >
+                Todo Form
+              </Link>
+            </li>
           </ul>
         </div>
-        <div style={{ textAlign: "center" }}>
-          <button
-            style={{
-              padding: "10px 15px",
-              border: "none",
-              borderRadius: "8px",
-              background: "#4facfe",
-              color: "#fff",
-              fontWeight: "bold",
-              width: "100%",
-            }}
-          >
+        <div className="sidebar-footer">
+          <button className="logout-btn" onClick={handelLogout}>
             Logout
           </button>
         </div>
       </div>
-      </div>
-      </div>
-  )
-}
+    </div>
+  );
+};
 
-export default Sidebar
+export default Sidebar;

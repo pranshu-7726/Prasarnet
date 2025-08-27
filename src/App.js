@@ -12,12 +12,12 @@ const [headerName, setHeaderName]=useState("");
   return (
     <>
       <BrowserRouter>
-        <div style={{ display: "flex", flexDirection: "row", background: "#f0f4f8" }}>
+        <div style={{ display: "flex", flexDirection: "row", background: "#f0f4f8"}}>
           <Sidebar setHeaderName={setHeaderName}/>
-          <div style={{ display: "flex",width:"85vw",flexDirection: "column" }}>
+          <div style={{ display: "flex",width:"85vw",flexDirection: "column"}}>
             <Header headerName={headerName}/>
             <AppRoutes />
-          </div>
+          </div>  
         </div>
       </BrowserRouter>
     </>

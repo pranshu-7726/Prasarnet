@@ -1,27 +1,16 @@
 import React from 'react'
+import "./Header.css"
 
 const Header = ({headerName}) => {
   return (
-    <div className='' style={{ display: "flex",width:"85vw",fontFamily: "Arial, sans-serif" }}>
-
-   <div style={{  display: "flex", flex: 1,flexDirection: "column" }}>
-        <nav
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            padding: "10px 20px",
-            background: "#4facfe",
-            color: "#fff",
-            fontSize: "20px",
-            fontWeight: "bold",
-          }}
-        >
+   <div className="header-container">
+      <div className="header-wrapper">
+        <nav className="header-nav">
           {headerName}
-          <div style={{ fontSize: "14px" }}>Welcome, Akash</div>
+          <div className="header-user">Welcome, Akash</div>
         </nav>
-        </div>
-     </div>
+      </div>
+    </div>
   )
 }
 
