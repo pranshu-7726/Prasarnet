@@ -1,61 +1,9 @@
 import React from 'react'
+import "./Dashboard.css"
 
 const DsahBoard = () => {
   return (
-<div style={{ display: "flex", height: "100vh", fontFamily: "Arial, sans-serif" }}>
-          <div
-        style={{
-          width: "220px",
-          background: "#333",
-          color: "#fff",
-          padding: "20px",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-        }}
-      >
-        <div>
-          <h2 style={{ marginBottom: "30px", textAlign: "left" }}>Menu</h2>
-          <ul style={{ listStyle: "none", padding: "0" }}>
-            <li style={{ margin: "15px 0", }}> <a href="/DashBoard" style={{color:"#fff",textDecoration:"none"}}>DashBoard</a></li>
-            <li style={{ margin: "15px 0",  }}> <a href="/Profile" style={{color:"#fff",textDecoration:"none"}}>Profile</a></li>
-            <li style={{ margin: "15px 0",}}> <a href="TodoList" style={{color:"#fff",textDecoration:"none"}}>Todo List</a></li>
-            <li style={{ margin: "15px 0",}}> <a href="TodoFrom" style={{color:"#fff",textDecoration:"none"}}>Todo From</a></li>
-          </ul>
-        </div>
-        <div style={{ textAlign: "center" }}>
-          <button
-            style={{
-              padding: "10px 15px",
-              border: "none",
-              borderRadius: "8px",
-              background: "#4facfe",
-              color: "#fff",
-              fontWeight: "bold",
-              width: "100%",
-            }}
-          >
-            Logout
-          </button>
-        </div>
-      </div>
-      <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
-        <nav
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            padding: "10px 20px",
-            background: "#4facfe",
-            color: "#fff",
-            fontSize: "20px",
-            fontWeight: "bold",
-          }}
-        >
-          Dashboard
-          <div style={{ fontSize: "14px" }}>Welcome, Akash</div>
-        </nav>
-
+<div className='main'>
         <div
           style={{
             flex: 1,
@@ -147,7 +95,6 @@ const DsahBoard = () => {
           </div>
         </div>
       </div>
-    </div>
   )
 }
 

@@ -1,14 +1,25 @@
+import React,{useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Route } from 'react-router-dom';
 import AppRoutes from './appRoutes';
+import Header from './project/component/common/Header';
+import Sidebar from './project/component/common/Sidebar';
 
 function App() {
+const [headerName, setHeaderName]=useState("");
+
   return (
     <>
-    <BrowserRouter>
-      <AppRoutes />
-    </BrowserRouter>
+      <BrowserRouter>
+        <div style={{ display: "flex", flexDirection: "row", background: "#f0f4f8" }}>
+          <Sidebar setHeaderName={setHeaderName}/>
+          <div style={{ display: "flex",width:"85vw",flexDirection: "column" }}>
+            <Header headerName={headerName}/>
+            <AppRoutes />
+          </div>
+        </div>
+      </BrowserRouter>
     </>
   );
 }
