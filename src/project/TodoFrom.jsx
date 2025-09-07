@@ -1,36 +1,29 @@
-import React from "react";
-import "./TodoFrom.css"
+
+import React from 'react';
+import "./TodoFrom.css";
 
 const TodoForm = () => {
   return (
-   <div className="todo-container">
-      <div className="todo-content">
-        <div className="todo-card">
-          <h1 className="todo-title">Todo Form Office</h1>
-
-          <form className="todo-form">
-            <input type="text" placeholder="Enter Your Name..." className="todo-input" />
-          </form>
-
-          <form className="todo-form">
-            <input type="text" placeholder="Enter Your Email..." className="todo-input" />
-          </form>
-
-          <form className="todo-form">
-            <input type="text" placeholder="Enter Your Password..." className="todo-input" />
-          </form>
-
-          <div className="date-time-wrapper">
-            <input type="date" className="date-input" />
-            <input type="time" className="time-input" />
+    <div className="body">
+      <div className="main-container">
+        <h1>ToDo From</h1>
+        <div className="todo-list">
+          <div className="todo-item">
+            <input type="checkbox" id="task1" />
+            <label htmlFor="task1">Learn React</label>
           </div>
-
-          <div className="btn-wrapper">
-            <button className="save-btn">Save</button>
+          <div className="todo-item">
+            <input type="checkbox" id="task2" />
+            <label htmlFor="task2">Build a Todo App</label>
+          </div>
+          <div className="todo-item">
+            <input type="checkbox" id="task3" />
+            <label htmlFor="task3">Using JavaScript</label>
           </div>
         </div>
       </div>
     </div>
   );
 };
+
 export default TodoForm;

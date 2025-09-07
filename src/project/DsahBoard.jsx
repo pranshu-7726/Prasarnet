@@ -1,42 +1,32 @@
 import React from 'react'
 import "./Dashboard.css"
-
 const DsahBoard = () => {
    return (
-    <div className="dashboard-main">
-      <h2 className="dashboard-title">Overview</h2>
-      <div className="dashboard-grid">
-        <div className="dashboard-card">
-          <h3>Total Users</h3>
-          <p className="dashboard-value">120</p>
-        </div>
-
-        <div className="dashboard-card shadow">
-          <h3>Exams Taken</h3>
-          <p className="dashboard-value">15</p>
-        </div>
-
-        <div className="dashboard-card shadow">
-          <h3>Certificates</h3>
-          <p className="dashboard-value">6</p>
-        </div>
-
-        <div className="dashboard-card shadow">
-          <h3>Overall Percentage</h3>
-          <p className="dashboard-value highlight">75%</p>
-        </div>
-
-        <div className="dashboard-card shadow">
-          <h3>Overall Grade</h3>
-          <p className="dashboard-value highlight">A+</p>
-        </div>
-
-        <div className="dashboard-card shadow">
-          <h3>Most Attempted Subject</h3>
-          <p className="dashboard-subject">Programming</p>
-        </div>
+    <div className='body'>
+      <h1>Welcome to your dashboard</h1>
+      <div className='recent-projects'>
+        <h3>Your recent Projects</h3>
+        <p className="value"></p>
+      </div>
+        <div className='completed-project'>
+        <h3>Your completed Projects</h3>
+        <p className="value"></p>
+      </div>
+      <div className='upcoming-projects'>
+        <h3>Your upcoming Projects</h3>
+        <p className="value"></p>
+      </div>
+      <div className='projects-have'>
+        <h3>Projects You Have</h3>
+        <p className="value"></p>
+      </div>
+      <div className='like-projects'>
+        <h3>Projects You Like</h3>
+        <p className="value"></p>
       </div>
     </div>
+      
+
   );
 };
 

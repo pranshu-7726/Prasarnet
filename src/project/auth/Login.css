@@ -1,0 +1,45 @@
+body{
+    background-color: rgb(38, 34, 230);
+}
+h1{
+    color: rgb(123, 182, 241);
+    text-align: center;
+}
+    .body{
+    height: 100%;
+    font-size: large;
+    font-style: arial;
+    
+}
+form{
+        font-size: large;
+        background-color: rgb(105, 211, 235);
+        max-width: 600px; 
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 5px;
+        text-wrap-style: auto;
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+   
+    button {
+        background-color: rgb(202, 206, 75);
+        color: black;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        }
+        .signup{
+            color: thistle;
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            p{
+                color: rgb(223, 90, 90);
+            }
+            font-size: large;
+        }
+    }

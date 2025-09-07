@@ -1,103 +1,46 @@
-import React from 'react'
+import React from 'react';
+import "./Register.css";
 
 const Register = () => {
   return (
-   <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh",
-      background: "#95bfe7ff",
-        fontFamily: "Arial, sans-serif",
-      }}
-    >
-      <div
-        style={{
-          background: "transparent",
-          padding: "40px",
-          border:"3px solid #eaeef1ff",
-          borderRadius: "15px",
-          boxShadow: "0 8px 20px rgba(0,0,0,0.15)",
-          width: "350px",
-          textAlign: "center",
-        }}
-      >
-        <h1 style={{ marginBottom: "25px", color: "#000000ff" }}>Sign up</h1>
-        <div style={{ textAlign: "left" }}>
-         <p style={{ margin: "2px 4px", fontWeight: "bold" }}>Name</p>
-          <input
-            type="text"
-            placeholder="Name"
-            style={{
-              width: "100%",
-              padding: "10px",
-              marginBottom: "15px",
-              borderRadius: "8px",
-              border: "1px solid #ccc",
-              outline: "none",
-              fontSize: "14px",
-            }}
-          />
-          <p style={{ margin: "2px 4px", fontWeight: "bold" }}>Email</p>
-          <input
-            type="text"
-            placeholder="Email"
-            style={{
-              width: "100%",
-              padding: "10px",
-              marginBottom: "15px",
-              borderRadius: "8px",
-              border: "1px solid #ccc",
-              outline: "none",
-              fontSize: "14px",
-            }}
-          />
-          <p style={{ margin: "2px  4px", fontWeight: "bold" }}>Password</p>
-          <input
-            type="password"
-            placeholder="Password"
-            style={{
-              width: "100%",
-              padding: "10px",
-              marginBottom: "10px",
-              borderRadius: "8px",
-              border: "1px solid #ccc",
-              outline: "none",
-              fontSize: "14px",
-            }}
-          />
-        </div>
-        <button
-          style={{
-            width: "100%",
-            padding: "12px",
-            borderRadius: "8px",
-            border: "none",
-            background: "#4facfe",
-            color: "#fff",
-            fontSize: "16px",
-            fontWeight: "bold",
-          }}
-        >
-          Sign Up
-        </button>
-        <p style={{ marginTop: "15px", fontSize: "14px" }}>
-          Already have an account?
-          <a
-            href="/Login"
-            style={{
-              color: "rgba(69, 21, 180, 1)",
-              fontWeight: "bold",
-              textDecoration: "none",
-            }}
-          >
-            Login
-          </a>
-        </p>
-      </div>
-    </div>
-  )
-}
+    <div className="body">
+    <div className="register">
+      <h1>Register Page</h1>
+      <form>
+        <div className="form">
+          <div className='enterDetails'>
+          <label htmlFor="username">Username:</label>
+          <input type="text" id="username" name="username" required />
+          <br />
 
-export default Register
+          <label htmlFor="firstname">First Name:</label>
+          <input type="text" id="firstname" name="firstname" required />
+          <br />
+          <label htmlFor="lastname">Last Name:</label>
+          <input type="text" id="lastname" name="lastname" required />
+          <br />
+
+          <label htmlFor="emailid">Email ID:</label>
+          <input type="email" id="emailid" name="email" required />
+          <br />
+
+       
+          <label htmlFor="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        </div>
+        <button type="submit">Register</button>
+
+        <div className="signup">
+          <p>
+            If you have an account? <a href="/Login">Login</a>
+          </p>
+        </div>
+      </form>
+    </div>
+    </div>
+  );
+};
+
+export default Register;
+

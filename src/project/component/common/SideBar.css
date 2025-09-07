@@ -7,7 +7,7 @@
 
 .sidebar {
   width: 11.5vw;
-  background: #333;
+  background: #2eb4dc;
   color: #fff;
   padding: 20px;
   display: flex;
@@ -20,12 +20,14 @@
 .sidebar-title {
   margin-bottom: 30px;
   text-align: left;
+  color: blue;
 }
 
 .sidebar-list {
   list-style: none;
   padding: 0;
   margin: 0;
+  
 }
 
 .sidebar-list li {

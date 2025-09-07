@@ -7,7 +7,7 @@ const Header = ({headerName}) => {
       <div className="header-wrapper">
         <nav className="header-nav">
           {headerName}
-          <div className="header-user">Welcome, Akash</div>
+          <div className="header-user">Welcome, Pranshu</div>
         </nav>
       </div>
     </div>

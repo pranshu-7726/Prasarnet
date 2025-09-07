@@ -1,42 +1,25 @@
-.dashboard-main {
-  flex: 1;
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 20px;
-  background: #f4f6f8;
-  overflow-y: auto;
-  font-family: Arial, sans-serif;
+  color: azure;
 }
-
-.dashboard-title {
-    color: rgb(27, 52, 196);
-  margin-bottom: 15px;
+.content{
+  background-color: darkslateblue;
+  padding: 10px;
+  border-radius: 5px;
 }
-
-.dashboard-grid {
-  display: grid;
-  gap: 20px;
-}
-
-.dashboard-card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 12px;
+.recent-projects,
+.completed-project,
+.upcoming-projects,
+.projects-have,
+.like-projects {
+  background-color: rgb(51, 194, 226);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+  width: 300px;
   text-align: center;
-}
-
-.shadow {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.dashboard-value {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.dashboard-value.highlight {
-  color: #3c63ceff;
-}
-
-.dashboard-subject {
-  font-size: 20px;
-  font-weight: bold;
+  color: rgb(1, 9, 255);
 }

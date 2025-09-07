@@ -3,24 +3,26 @@ import "./TodoList.css"
 
 const TodoList = () => {
   return (
-    <div className="todoList-container">
-      <div className="todoList-wrapper">
-        <div className="todoList-card">
-          <h2 className="todoList-title">My Todo List</h2>
-          <div className="todoList-inputWrapper">
-            <input type="text" placeholder="Add a new task" className="todoList-input" />
-            <div className="todoList-btnWrapper">
-              <button className="todoList-addBtn">Add</button>
-            </div>
-          </div>
-
-          <ul className="todoList-ul">
-            <li className="todoList-li">Learn HTML</li>
-            <li className="todoList-li">Learn CSS</li>
-            <li className="todoList-li">Learn JavaScript</li>
-          </ul>
+    <div className="body">
+    <div className="main-container">
+      <h1>ToDo List</h1>
+      <div className="todo-list">
+        <div className="todo-item">
+          <input type="checkbox" id="task1" />
+          <label htmlFor="task1">Learn React</label>
+        </div>
+        <div className="todo-item">
+          <input type="checkbox" id="task2" />
+          <label htmlFor="task2">Build a Todo App</label>
+        </div>
+          <div className="todo-work">
+          <input type="checkbox" id="task3" />
+          <label htmlFor="task3">Using Java Script</label>
         </div>
       </div>
+  
+  
+    </div>
     </div>
   );
 };

@@ -1,63 +1,33 @@
-import React, { useState } from 'react';
-import "./Profile.css"
+import React from 'react'
+import './Profile.css'
 
 const Profile = () => {
-  const [name, setName]=useState("Akash maity");
-  const [Email , setEmail]= useState("am6030920@gmail.com");
-  const [phone, setPhone] =useState("+91 983103680");
-
-  const [isEditing, setIsEditing] = useState(false);
-  const handleSave = () => {
-    setIsEditing(false);
-  };
-
   return (
-     <div className="profile-container">
-      <div className="profile-content">
-        <div className="profile-card-wrapper">
-          <div className="profile-card">
-            <img
-              src="https://i0.wp.com/florrycreativecare.com/wp-content/uploads/2020/08/blank-profile-picture-mystery-man-avatar-973460.jpg?ssl=1"
-              alt="Profile"
-              className="profile-image"
-            />
-             {isEditing ? (
-              <>
-                <input 
-                  type="text" 
-                  value={name} 
-                  onChange={(e) => setName(e.target.value)} 
-                  className="edit-input"
-                />
-                <input 
-                  type="Email" 
-                  value={Email} 
-                  onChange={(e) => setEmail(e.target.value)} 
-                  className="edit-input"
-                />
-                <input 
-                  type="text" 
-                  value={phone} 
-                  onChange={(e) => setPhone(e.target.value)} 
-                  className="edit-input"
-                />
-                <button onClick={handleSave} className="edit-btn">Save</button>
-              </>
-            ) : (
-              <>
-                <h2 className="profile-name">Name: {name}</h2>
-                <p className="profile-info">Email: {Email}</p>
-                <p className="profile-info">Phone No: {phone}</p>
-                <button onClick={() => setIsEditing(true)} className="edit-btn">
-                  Edit Profile
-                </button>
-              </>
-            )}
-          </div>
+    <div className='p'>
+      <div className='hd'>
+        <h1 className='pwel'>WELCOME</h1>
+        <br />
+        <br />
+
+    
+      </div>
+      <div className='lopo'>
+        <h3 className='ln'>Name : </h3>
+        
+       
+        <p className='le'>Email : </p>
+        
+        <p className='lp'>Phone : </p>
+        <br />
+       <div className='bkl'>
+        <button className='blk' type="submit"><a className='editbu' href="/Useredit">EDIT PROFILE</a></button>
         </div>
       </div>
+     
+       <br />
+          <a className='log' href="/login">LOGOUT</a>
     </div>
-  );
-};
+  )
+}
 
-export default Profile;
+export default Profile
